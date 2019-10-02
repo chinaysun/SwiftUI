@@ -34,6 +34,7 @@
 		60BE9C6423437DDB00C421FF /* turtlerock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60BE9C5823437DDB00C421FF /* turtlerock.jpg */; };
 		60BE9C6523437DDB00C421FF /* hiddenlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60BE9C5923437DDB00C421FF /* hiddenlake.jpg */; };
 		60BE9C6723437FE600C421FF /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE9C6623437FE600C421FF /* LandmarkList.swift */; };
+		60CE00CB2344EF4C00BF0422 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE00CA2344EF4C00BF0422 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		60BE9C5823437DDB00C421FF /* turtlerock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = turtlerock.jpg; sourceTree = "<group>"; };
 		60BE9C5923437DDB00C421FF /* hiddenlake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hiddenlake.jpg; sourceTree = "<group>"; };
 		60BE9C6623437FE600C421FF /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
+		60CE00CA2344EF4C00BF0422 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				605A50D62343799E00A63258 /* Stub */,
 				605A50CB234373B000A63258 /* Landmark.swift */,
+				60CE00CA2344EF4C00BF0422 /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				60884E38234236200016110E /* LandmarkDetail.swift in Sources */,
 				605A50D32343789E00A63258 /* LandmarkRow.swift in Sources */,
 				605A50CC234373B000A63258 /* Landmark.swift in Sources */,
+				60CE00CB2344EF4C00BF0422 /* UserData.swift in Sources */,
 				605A50D8234379A900A63258 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

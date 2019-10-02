@@ -15,7 +15,7 @@ struct Coordinates: Codable {
     let longitude: Double
 }
 
-struct Landmark: Codable {
+struct Landmark: Codable, Identifiable {
     
     let id: Int
     let name: String
@@ -24,6 +24,7 @@ struct Landmark: Codable {
     let state: String
     let park: String
     let category: Category
+    var isFavorite: Bool
     
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(

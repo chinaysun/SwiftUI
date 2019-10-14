@@ -25,6 +25,7 @@ struct Landmark: Codable, Identifiable {
     let park: String
     let category: Category
     var isFavorite: Bool
+    var isFeatured: Bool
     
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
@@ -38,7 +39,7 @@ extension Landmark {
     
     enum Category: String, CaseIterable, Codable, Hashable {
 
-        case featured = "Featured"
+        case featured = "Mountains"
         case lakes = "Lakes"
         case rivers = "Rivers"
     }

@@ -5,6 +5,8 @@
 //  Created by Yu Sun on 1/10/19.
 //  Copyright © 2019 Yu Sun. All rights reserved.
 //
+//  Added some commands
+//  More commands in
 
 import SwiftUI
 import CoreLocation

@@ -12,20 +12,26 @@ struct CardView: View {
     private struct Constants {
         static let cornerRaidus: CGFloat = 10
         static let lineWidth: CGFloat = 3
+        static let fontScaleFactor: CGFloat = 0.75
     }
     
     var card: MemoryGame<String>.Card
 
     var body: some View {
+        GeometryReader { self.body(for: $0.size) }
+    }
+    
+    private func body(for size: CGSize) -> some View {
         ZStack {
             if card.isFacingUp {
-                RoundedRectangle(cornerRadius: Constants.cornerRaidus).foregroundColor(.green)
+                RoundedRectangle(cornerRadius: Constants.cornerRaidus).foregroundColor(.white)
                 RoundedRectangle(cornerRadius: Constants.cornerRaidus).stroke(lineWidth: Constants.lineWidth)
                 Text(card.content)
             } else {
-                RoundedRectangle(cornerRadius: Constants.cornerRaidus)
+                RoundedRectangle(cornerRadius: Constants.cornerRaidus).fill()
             }
         }
+        .font(Font.system(size: min(size.width, size.height) * Constants.fontScaleFactor))
     }
 }
 

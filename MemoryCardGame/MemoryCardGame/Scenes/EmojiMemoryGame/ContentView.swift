@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var viewModel: EmojiMemoryGame
+    @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
         HStack {
@@ -18,9 +18,8 @@ struct ContentView: View {
                     self.viewModel.choose(card)
                 }
             }
-        .padding()
+            .padding()
             .foregroundColor(.orange)
-            .font(.largeTitle)
         }
     }
 }

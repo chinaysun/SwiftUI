@@ -19,6 +19,8 @@
 		3EEEF2FA2490A7B10066F9D9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEEF2F92490A7B10066F9D9 /* Grid.swift */; };
 		3EEEF2FC2490AD580066F9D9 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEEF2FB2490AD580066F9D9 /* GridLayout.swift */; };
 		3EEEF3002490BA430066F9D9 /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEEF2FF2490BA430066F9D9 /* Array+Utilities.swift */; };
+		3EEEF3022491E0140066F9D9 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEEF3012491E0140066F9D9 /* Cardify.swift */; };
+		3EEEF3042491E4170066F9D9 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEEF3032491E4170066F9D9 /* Pie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		3EEEF2F92490A7B10066F9D9 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		3EEEF2FB2490AD580066F9D9 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		3EEEF2FF2490BA430066F9D9 /* Array+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
+		3EEEF3012491E0140066F9D9 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
+		3EEEF3032491E4170066F9D9 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 			children = (
 				3EEEF2F92490A7B10066F9D9 /* Grid.swift */,
 				3EEEF2FB2490AD580066F9D9 /* GridLayout.swift */,
+				3EEEF3012491E0140066F9D9 /* Cardify.swift */,
+				3EEEF3032491E4170066F9D9 /* Pie.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +242,8 @@
 				3EEEF3002490BA430066F9D9 /* Array+Utilities.swift in Sources */,
 				3EEEF2FA2490A7B10066F9D9 /* Grid.swift in Sources */,
 				3E82E9EF24867B0200306AC3 /* CardView.swift in Sources */,
+				3EEEF3042491E4170066F9D9 /* Pie.swift in Sources */,
+				3EEEF3022491E0140066F9D9 /* Cardify.swift in Sources */,
 				3EEEF2FC2490AD580066F9D9 /* GridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

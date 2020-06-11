@@ -16,7 +16,7 @@ struct ContentView: View {
             CardView(card: card).onTapGesture {
                 self.viewModel.choose(card)
             }
-            .padding()
+            .padding(5)
             .foregroundColor(.orange)
         }
     }
@@ -24,6 +24,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: .init())
+        let viewModel = EmojiMemoryGame()
+        viewModel.choose(viewModel.cards[0])
+        return ContentView(viewModel: viewModel)
     }
 }

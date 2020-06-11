@@ -7,9 +7,9 @@
 //
 
 struct MemoryGame<CardContent> where CardContent: Equatable {
-    var cards: [Card]
+    private(set) var cards: [Card]
 
-    var indexOfTheOneAndOnlyFaceUpCard: Int? {
+    private var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get {
             cards.firstIndex(where: { $0.isFacingUp && !$0.isMatched })
         }
@@ -47,3 +47,4 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         var id: Int
     }
 }
+

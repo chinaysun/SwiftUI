@@ -19,16 +19,41 @@ struct CardView: View {
         GeometryReader { self.body(for: $0.size) }
     }
 
+    @State private var animatedBonusRemaining: Double = 0
+
+    private func startBonusTimeAnimation() {
+        animatedBonusRemaining = card.bonusRemaining
+        withAnimation(.linear(duration: card.bonusTimeRemaining)) {
+            animatedBonusRemaining = 0
+        }
+    }
+
+    @ViewBuilder
     private func body(for size: CGSize) -> some View {
-        ZStack {
-            Pie(startAngle: .degrees(-90), endAngle: .degrees(20), clockwise: true)
+        if card.isFacingUp || !card.isMatched {
+            ZStack {
+                Group {
+                    if card.isConsumingBonusTime {
+                        Pie(startAngle: .degrees(-90), endAngle: .degrees(-animatedBonusRemaining * 360 - 90), clockwise: true)
+
+                            .onAppear {
+                                self.startBonusTimeAnimation()
+                            }
+                    } else {
+                        Pie(startAngle: .degrees(-90), endAngle: .degrees(-card.bonusRemaining * 360 - 90), clockwise: true)
+                    }
+                }
                 .padding(5)
                 .opacity(0.4)
-            Text(card.content)
-        }
 
-        .cardify(isFaceUp: card.isFacingUp)
-        .font(Font.system(size: min(size.width, size.height) * Constants.fontScaleFactor))
+                Text(card.content)
+                    .rotationEffect(.degrees(card.isMatched ? 360 : 0))
+                    .animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
+            }
+            .cardify(isFaceUp: card.isFacingUp)
+            .font(Font.system(size: min(size.width, size.height) * Constants.fontScaleFactor))
+            .transition(.scale)
+        }
     }
 }
 
